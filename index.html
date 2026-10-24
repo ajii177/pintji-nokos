@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#075bea">
+  <title>PINTJI NOKOS — Virtual Number Marketplace</title>
+  <meta name="description" content="PINTJI NOKOS — marketplace nomor virtual dengan dashboard yang simpel.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="PINTJI NOKOS beranda">
+      <span class="brand-icon">P</span>
+      <span><b>PINTJI</b><strong>NOKOS</strong></span>
+    </a>
+    <button class="menu-button" id="menuButton" aria-label="Buka menu">☰</button>
+    <nav id="nav">
+      <a href="#layanan">Layanan</a><a href="#cara-kerja">Cara Kerja</a>
+      <button class="nav-login" id="loginBtn">Masuk</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="dot"></span> VIRTUAL NUMBER MARKETPLACE</span>
+        <h1>Nomor virtual,<br><span>lebih simpel.</span></h1>
+        <p>Pilih layanan dan negara, lalu kelola pesananmu dalam satu dashboard yang mudah digunakan.</p>
+        <div class="hero-actions"><a class="btn primary" href="#layanan">Jelajahi layanan <span>↗</span></a><a class="btn secondary" href="#cara-kerja">Cara kerja</a></div>
+        <div class="trust-row"><span>✓ Harga transparan</span><span>✓ Status pesanan jelas</span></div>
+      </div>
+      <div class="hero-art" aria-label="Ilustrasi ponsel digital">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="phone"><div class="speaker"></div><div class="screen-badge">P</div><div class="signal">•••</div><div class="phone-line"></div><div class="phone-line short"></div><div class="phone-card"><span class="mini-icon">✓</span><span><b>Pesanan siap</b><small>Contoh tampilan</small></span></div></div>
+        <div class="float-chip chip-top">⚡ Cepat & praktis</div><div class="float-chip chip-bottom">● Dashboard sederhana</div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><b>01</b><span>Pilih layanan</span></div><div><b>02</b><span>Pilih negara</span></div><div><b>03</b><span>Kelola pesanan</span></div>
+    </section>
+
+    <section class="section" id="layanan">
+      <div class="section-heading"><div><span class="eyebrow">KATALOG</span><h2>Temukan layanan</h2><p>Pilih kebutuhanmu dari katalog demo di bawah ini.</p></div><div class="demo-tag">MODE DEMO</div></div>
+      <div class="filters">
+        <label class="searchbox"><span>⌕</span><input id="searchInput" placeholder="Cari layanan..." autocomplete="off"></label>
+        <select id="countryFilter" aria-label="Filter negara"><option value="all">Semua negara</option><option value="Indonesia">Indonesia</option><option value="Amerika Serikat">Amerika Serikat</option><option value="Britania Raya">Britania Raya</option><option value="Malaysia">Malaysia</option></select>
+      </div>
+      <div class="notice"><span>ⓘ</span> Harga dan stok berikut hanya contoh. Pesanan belum terhubung ke penyedia nomor atau pembayaran sungguhan.</div>
+      <div class="catalog" id="catalog"></div>
+    </section>
+
+    <section class="how section" id="cara-kerja">
+      <div class="section-heading"><div><span class="eyebrow">MUDAH DIGUNAKAN</span><h2>Cara kerjanya</h2></div></div>
+      <div class="steps"><article><span>01</span><h3>Pilih layanan</h3><p>Gunakan katalog untuk menemukan layanan dan negara yang tersedia.</p></article><article><span>02</span><h3>Konfirmasi pesanan</h3><p>Periksa detail dan harga sebelum melanjutkan pesanan.</p></article><article><span>03</span><h3>Pantau status</h3><p>Lihat pembaruan pesanan di dashboard setelah integrasi backend aktif.</p></article></div>
+    </section>
+
+    <section class="cta"><div><span class="eyebrow">PINTJI NOKOS</span><h2>Siap jadi lebih praktis?</h2><p>Mulai dari demo ini, lalu sambungkan backend, provider, dan pembayaran resmi.</p></div><button class="btn white" id="ctaBtn">Coba katalog <span>↗</span></button></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-icon">P</span><span><b>PINTJI</b><strong>NOKOS</strong></span></a><span>© <span id="year"></span> PINTJI NOKOS. Gunakan layanan sesuai aturan penyedia.</span></footer>
+
+  <dialog id="orderDialog">
+    <button class="close" id="closeDialog" aria-label="Tutup">×</button>
+    <div class="dialog-icon">P</div><span class="eyebrow">KONFIRMASI DEMO</span><h2 id="dialogTitle">Pesan layanan</h2>
+    <p id="dialogDesc">Ini hanya simulasi tampilan, belum ada transaksi sungguhan.</p>
+    <div class="dialog-summary"><span>Negara</span><b id="dialogCountry">—</b><span>Harga contoh</span><b id="dialogPrice">—</b></div>
+    <button class="btn primary full" id="confirmOrder">Simulasikan pesanan</button>
+    <p class="tiny">Tidak ada saldo atau pembayaran yang diproses.</p>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
